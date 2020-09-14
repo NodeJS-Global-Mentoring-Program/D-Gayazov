@@ -3,16 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
   "scripts": {
     "task1": "nodemon ./task1.js",
     "task2": "nodemon ./task2.js",
-    "task3": "nodemon ./task3.js",
+    "task3": "nodemon --exec babel-node ./task3.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
     "nodemon": "^2.0.4",
     "process": "^0.11.10"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
   }
 }
